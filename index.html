@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROKO - Block Reels & Shorts | Reclaim Your Focus</title>
+  <!-- Google Fonts - Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Decorative Blurs -->
+  <div class="glow-bg-1"></div>
+  <div class="glow-bg-2"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo-area" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <img src="assets/logo.jpg" alt="ROKO Logo" class="nav-logo">
+        <span class="nav-title">ROKO</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#calculator">Time Saved</a>
+        <a href="#faqs">FAQ</a>
+        <a href="#about">About</a>
+      </nav>
+      <a href="#waitlist" class="btn-primary nav-cta">Join Waitlist</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="hero-container">
+      
+      <!-- Hero Copy -->
+      <div class="hero-text-content">
+        <div class="hero-badge">
+          <span class="badge-icon">🧠</span> Reclaim Your Attention Span
+        </div>
+        <h1 class="hero-headline">
+          Break the Scroll Loop.<br>
+          <span class="text-gradient">Block Reels & Shorts.</span>
+        </h1>
+        <p class="hero-subheadline">
+          ROKO is a premium focus companion that intercepts addictive short-form feeds on your phone, while keeping the productive parts of your favorite apps fully functional.
+        </p>
+
+        <!-- Coming Soon & Waitlist Form -->
+        <div class="coming-soon-container" id="waitlist">
+          <p class="coming-soon-text">Will be available soon on Play Store</p>
+          <div class="store-badge-coming-soon">
+            <div class="store-badge">
+              <svg class="badge-svg" viewBox="0 0 512 512" fill="none">
+                <path d="M47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0z" fill="#00C3FF"/>
+                <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z" fill="#00E75A"/>
+                <path d="M472.2 225.6l-58-33.3-60.7 60.7 60.7 60.7 58-33.3c15.2-8.7 24.8-23.7 24.8-42.4 0-18.8-9.6-33.7-24.8-42.4z" fill="#FF3B30"/>
+                <path d="M325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z" fill="#FFD600"/>
+              </svg>
+              <div>
+                <span>GET IT ON</span>
+                <strong>Google Play</strong>
+              </div>
+            </div>
+          </div>
+          
+          <form class="waitlist-form" id="waitlist-form">
+            <input type="email" placeholder="Enter your email for early access" required class="waitlist-input" id="waitlist-email">
+            <button type="submit" class="btn-primary waitlist-btn">Notify Me</button>
+          </form>
+          <div class="waitlist-success" id="waitlist-success-msg">
+            <span>✓</span> You're on the list! We'll notify you once ROKO launches on the Play Store.
+          </div>
+        </div>
+
+        <p class="hero-meta">✨ Free Pre-Registration • local processing, 100% private</p>
+      </div>
+
+      <!-- Hero Phone Showcase (Dual Phone Screenshot Gallery) -->
+      <div class="hero-phone-showcase" id="demo">
+        <div class="phone-gallery-wrapper">
+          
+          <!-- Phone 1 (Home Screen) -->
+          <div class="phone-frame mockup-home">
+            <div class="phone-notch">
+              <div class="notch-camera"></div>
+              <div class="notch-speaker"></div>
+            </div>
+            <div class="phone-screen-img-container">
+              <img src="assets/ss_home.png" alt="ROKO App Home Screen" class="phone-screenshot-img">
+            </div>
+            <div class="phone-home-indicator"></div>
+          </div>
+          
+          <!-- Phone 2 (Apps Screen) -->
+          <div class="phone-frame mockup-apps">
+            <div class="phone-notch">
+              <div class="notch-camera"></div>
+              <div class="notch-speaker"></div>
+            </div>
+            <div class="phone-screen-img-container">
+              <img src="assets/ss_apps.png" alt="ROKO App Apps Screen" class="phone-screenshot-img">
+            </div>
+            <div class="phone-home-indicator"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Value Propositions / Supported Apps Grid -->
+  <section class="features-section" id="features">
+    <div class="section-container">
+      <div class="section-header-center">
+        <h2 class="section-title">Block What Distracts. Keep the Rest.</h2>
+        <p class="section-subtitle">Unlike broad blockers that lock you out of entire apps, ROKO targets the addictive sub-features so you can stay connected productively.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Instagram Card -->
+        <div class="feature-card">
+          <div class="card-icon instagram">
+            <svg class="app-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </div>
+          <h3>Instagram Reels Blocker</h3>
+          <p>Blocks the Reels tab immediately, allows normal home feed browsing but blocks clicked videos and watches > 5 seconds.</p>
+        </div>
+
+        <!-- YouTube Card -->
+        <div class="feature-card">
+          <div class="card-icon youtube">
+            <svg class="app-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.107C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.388.511a3.002 3.002 0 0 0-2.11 2.107C0 8.053 0 12 0 12s0 3.947.502 5.837a3.003 3.003 0 0 0 2.11 2.107c1.883.511 9.388.511 9.388.511s7.505 0 9.388-.511a3.002 3.002 0 0 0 2.11-2.107C24 15.947 24 12 24 12s0-3.947-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </div>
+          <h3>YouTube Shorts Shield</h3>
+          <p>Hides the Shorts feed entirely and blocks the Shorts video player. Keep using YouTube for study and work without slipping up.</p>
+        </div>
+
+        <!-- TikTok Card -->
+        <div class="feature-card">
+          <div class="card-icon tiktok">
+            <svg class="app-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.032 2.614-.01 3.91-.02.08 1.543.684 3.01 1.73 4.12 1.085 1.09 2.533 1.748 4.07 1.86v3.83c-1.376-.067-2.73-.553-3.87-1.4-1.077-.824-1.89-1.99-2.32-3.32-.054 2.29-.028 4.584-.04 6.878-.027 1.134-.236 2.274-.62 3.337-.76 2.052-2.316 3.73-4.316 4.63-2 .88-4.29.988-6.36.31-1.96-.653-3.612-2.072-4.52-3.896-.867-1.747-1.066-3.8-.543-5.69.57-1.963 1.88-3.642 3.63-4.646 1.77-1.002 3.88-1.282 5.855-.78 1.157.29 2.24.912 3.09 1.767v-3.79c-.01-2.2-.016-4.402.022-6.602z"/></svg>
+          </div>
+          <h3>TikTok Infinite Blocker</h3>
+          <p>Intercepts scrolling video feeds completely. Profile pages, direct messages, and search are safely bypassed.</p>
+        </div>
+
+        <!-- Facebook Card -->
+        <div class="feature-card">
+          <div class="card-icon facebook">
+            <svg class="app-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </div>
+          <h3>Facebook Reels Block</h3>
+          <p>Blocks Reels feeds and the Facebook video reels scroll. Keeps normal posts, events, and family group features active.</p>
+        </div>
+
+        <!-- Snapchat Card -->
+        <div class="feature-card">
+          <div class="card-icon snapchat">
+            <svg class="app-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.006 14.154c-.062-.057-.156-.129-.272-.213a5.53 5.53 0 0 1-.58-.5c-.171-.183-.347-.417-.506-.68a4.9 4.9 0 0 1-.368-1.28c-.062-.596-.365-1.085-.857-1.396-.244-.152-.455-.334-.633-.541-.122-.146-.226-.312-.311-.498-.073-.159-.168-.324-.287-.49-.142-.195-.316-.368-.522-.502-.271-.18-.574-.254-.881-.229-.092-.008-.184-.002-.275.016-.08.016-.162.049-.244.098a1.21 1.21 0 0 1-.58.172c-.171 0-.342-.03-.506-.092l-.121-.047c-.07-.024-.131-.059-.2-.095a1.13 1.13 0 0 0-.256-.098 1.5 1.5 0 0 0-.275-.016c-.307.025-.61-.049-.881-.229a1.72 1.72 0 0 0-.522-.502 1.93 1.93 0 0 0-.287-.49 1.94 1.94 0 0 0-.311-.498c-.178-.207-.389-.389-.633-.541-.492-.311-.795-.8-.857-1.396a4.9 4.9 0 0 1-.368-1.28c-.159-.263-.335-.497-.506-.68-.19-.214-.384-.39-.58-.5a4.01 4.01 0 0 1-.272-.213c-.006-.006-.011-.013-.016-.02a.44.44 0 0 1-.137-.306c.005-.121.054-.236.136-.324a.43.43 0 0 1 .536.082 1.9 1.9 0 0 0 .584.092c.189 0 .376-.04.549-.122.378-.18.665-.512.793-.918a.63.63 0 0 0 .041-.219v-.115c0-.074-.014-.146-.039-.214a1.07 1.07 0 0 1-.041-.303v-.536c.01-1.385.642-2.695 1.725-3.568.995-.82 2.277-1.258 3.593-1.229 1.316-.029 2.598.409 3.593 1.229 1.083.873 1.715 2.183 1.725 3.568v.536a1.08 1.08 0 0 1-.041.303c-.027.068-.041.14-.041.214v.115c0 .077.014.152.041.225.128.403.415.732.793.912.173.082.36.122.549.122.199 0 .396-.03.584-.092.176-.062.363-.09.55-.082a.43.43 0 0 1 .422.439.44.44 0 0 1-.153.326z"/></svg>
+          </div>
+          <h3>Snapchat Spotlight Guard</h3>
+          <p>Blocks Spotlight feeds and Stories, leaving standard chats, snaps, streaks, map location, and profile areas completely functional.</p>
+        </div>
+
+        <!-- Strict Mode Card -->
+        <div class="feature-card premium-card">
+          <div class="card-icon premium">🛡️</div>
+          <h3>Strict Mode PIN Lock <span class="badge-pro-card">PRO</span></h3>
+          <p>Disable bypass options. Lock settings behind a passcode shared with an accountability partner, or configure a cool-down timer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Time Saved Interactive Calculator -->
+  <section class="calculator-section" id="calculator">
+    <div class="calc-container">
+      
+      <!-- Left Info -->
+      <div class="calc-info">
+        <h2 class="section-title">The True Cost of Brain-Rot</h2>
+        <p class="section-subtitle">Short-form videos are designed to keep you scrolling forever. Calculate how much of your life you can reclaim with ROKO.</p>
+        
+        <div class="slider-box">
+          <div class="slider-header">
+            <span>Daily Scroll Time:</span>
+            <strong id="slider-val-display">2.0 Hours</strong>
+          </div>
+          <input type="range" min="0.5" max="6" step="0.5" value="2" class="range-slider" id="time-slider">
+          <div class="slider-bounds">
+            <span>30m</span>
+            <span>6h+</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Output Cards -->
+      <div class="calc-output">
+        
+        <div class="output-grid">
+          <div class="output-card">
+            <span class="out-label">Time Saved / Month</span>
+            <h3 id="calc-monthly-hours">60 Hours</h3>
+          </div>
+          
+          <div class="output-card">
+            <span class="out-label">Days Reclaimed / Year</span>
+            <h3 id="calc-yearly-days">30.4 Days</h3>
+          </div>
+        </div>
+
+        <div class="output-equivalent-box">
+          <div class="equiv-icon">💡</div>
+          <div class="equiv-content">
+            <h4>Reclaimed potential in 1 year:</h4>
+            <p id="calc-equivalence-text">You can read 24 complete books, learn the foundations of a new language, or complete 2 professional courses in this time!</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <div class="section-container">
+      <div class="section-header-center">
+        <h2 class="section-title">Setup In 30 Seconds</h2>
+        <p class="section-subtitle">No root, no custom ROMs, and completely secure.</p>
+      </div>
+
+      <div class="steps-flow">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h4>Download ROKO</h4>
+          <p>Install ROKO from the App Store or Google Play Store in a single click.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h4>Enable Shield</h4>
+          <p>Enable background protection. ROKO requests minimal secure permissions to monitor screen content.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h4>Focus & Reclaim</h4>
+          <p>Monitored feeds block instantly. Watch your daily focus insights climb and reclaim your hours!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="section-container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Our Mission</h2>
+          <p class="section-subtitle">Fighting back against the attention economy.</p>
+          <p class="about-paragraph">
+            Today's major social media apps are designed by world-class engineers to capture as much of your attention as possible. Algorithms feed you short-form video loops (Reels, Shorts, TikToks) engineered to trigger dopamine and keep you scrolling for hours.
+          </p>
+          <p class="about-paragraph">
+            <strong>ROKO was founded on a simple principle:</strong> You should control your phone, not the other way around. By blocking only the addictive feeds while keeping messaging and utility open, ROKO helps you maintain connection while breaking the habit loops that steal your time.
+          </p>
+        </div>
+        <div class="about-stats-showcase">
+          <div class="about-stat-card">
+            <h3>100%</h3>
+            <p>Private & Offline</p>
+          </div>
+          <div class="about-stat-card">
+            <h3>&lt; 1%</h3>
+            <p>Battery Impact</p>
+          </div>
+          <div class="about-stat-card">
+            <h3>No Root</h3>
+            <p>Required to Block</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section class="faq-section" id="faqs">
+    <div class="section-container">
+      <div class="section-header-center">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about ROKO background protection.</p>
+      </div>
+
+      <div class="faq-grid-layout">
+        
+        <div class="faq-card-item">
+          <h4 class="faq-question">How does ROKO block feeds without blocking the whole app?</h4>
+          <p class="faq-answer">ROKO works beautifully by targeting only the addictive sub-features of the app (like Reels, Shorts, or scrolling video players) as soon as they appear. The normal posts, direct messaging, profile pages, and useful elements of the app remain completely untouched and fully functional, allowing you to stay connected productively!</p>
+        </div>
+
+        <div class="faq-card-item">
+          <h4 class="faq-question">Is my private scrolling data safe?</h4>
+          <p class="faq-answer">Yes, 100%! Your privacy is our highest priority. All filtering, blocking operations, and focus statistics calculations are processed entirely offline and locally on your device. ROKO never monitors, uploads, or shares your search queries, messages, or browsing behavior with any servers.</p>
+        </div>
+
+        <div class="faq-card-item">
+          <h4 class="faq-question">Does it drain battery or slow down my device?</h4>
+          <p class="faq-answer">Not at all! ROKO is highly optimized and lightweight. Its checks execute in microseconds only when one of the monitored apps is launched. During regular use, it sits completely idle. In extensive battery testing, ROKO uses less than 0.8% of battery over a full 24-hour cycle.</p>
+        </div>
+
+        <div class="faq-card-item">
+          <h4 class="faq-question">Can ROKO help me build permanent focus?</h4>
+          <p class="faq-answer">Absolutely! Users report a dramatic improvement in their daily attention spans, focus levels, and time saved within just the first 48 hours of blocking feeds. By breaking the instant-dopamine scrolling cycles, ROKO helps retrain your brain to engage in more productive, long-form habits.</p>
+        </div>
+
+        <div class="faq-card-item">
+          <h4 class="faq-question">Is pre-registration completely free?</h4>
+          <p class="faq-answer">Yes, it is entirely free! By joining our waitlist today, you secure early beta access before the public release, and you will receive exclusive early-bird benefits when ROKO officially launches on the Google Play Store.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Waitlist Footer Callout -->
+  <section class="cta-callout-section">
+    <div class="cta-card-bg">
+      <h2>Reclaim Your Time. Be the First to Know.</h2>
+      <p>ROKO is coming soon to the Google Play Store. Sign up now to be notified as soon as background protection is live.</p>
+      
+      <p class="coming-soon-text text-center mb-0-5">Will be available soon on Play Store</p>
+      <div class="store-badge-coming-soon justify-center mb-1-5">
+        <div class="store-badge">
+          <svg class="badge-svg" viewBox="0 0 512 512" fill="none">
+            <path d="M47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0z" fill="#00C3FF"/>
+            <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z" fill="#00E75A"/>
+            <path d="M472.2 225.6l-58-33.3-60.7 60.7 60.7 60.7 58-33.3c15.2-8.7 24.8-23.7 24.8-42.4 0-18.8-9.6-33.7-24.8-42.4z" fill="#FF3B30"/>
+            <path d="M325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z" fill="#FFD600"/>
+          </svg>
+          <div>
+            <span>GET IT ON</span>
+            <strong>Google Play</strong>
+          </div>
+        </div>
+      </div>
+      
+      <form class="waitlist-form form-centered" id="waitlist-form-footer">
+        <input type="email" placeholder="Enter your email address" required class="waitlist-input" id="waitlist-email-footer">
+        <button type="submit" class="btn-primary waitlist-btn">Join Waitlist</button>
+      </form>
+      <div class="waitlist-success" id="waitlist-success-msg-footer">
+        <span>✓</span> You're on the list! We will notify you once ROKO launches on the Play Store.
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="assets/logo.jpg" alt="ROKO Logo" class="nav-logo">
+          <span>ROKO</span>
+        </div>
+        <p>Your screen-time companion to block reels, shorts, and reclaim active hours.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-nav">
+          <a href="#features">Features</a>
+          <a href="#demo">Screenshots</a>
+          <a href="#calculator">Calculator</a>
+          <a href="#faqs">FAQs</a>
+        </div>
+        <p class="copyright">&copy; 2026 ROKO Protection. All rights reserved. Locally processed, privacy guaranteed.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Pro Unlock Modal -->
+  <div class="modal-overlay" id="pro-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span class="modal-crown">👑</span>
+        <h3>Unlock Strict Mode Pro</h3>
+      </div>
+      <p>Strict Mode prevents you from turning off ROKO protection or changing monitored apps when you are tempted. It can only be disabled via a passcode or after a cool-down timer.</p>
+      
+      <div class="pro-features-list">
+        <div class="pro-feature-item">
+          <span class="feat-check">✓</span>
+          <span><strong>Passcode Lock:</strong> Share PIN with a friend to hold you accountable.</span>
+        </div>
+        <div class="pro-feature-item">
+          <span class="feat-check">✓</span>
+          <span><strong>Uninstall Protection:</strong> Lock Android accessibility settings.</span>
+        </div>
+        <div class="pro-feature-item">
+          <span class="feat-check">✓</span>
+          <span><strong>Advanced Schedule:</strong> Auto-lock blocking on specific hours.</span>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="modal-btn cancel" id="pro-cancel-btn">Close</button>
+        <button class="modal-btn confirm" id="pro-upgrade-btn">Unlock Now (Free Mock)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Script -->
+  <script src="app.js"></script>
+</body>
+</html>
