@@ -82,33 +82,139 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-     WAITLIST FORM PRE-REGISTRATION HANDLERS
+     WAITLIST FORM & STORAGE HANDLERS
      ========================================================================== */
 
-  // Hero Form
+  // Local Storage helper functions
+  function getWaitlist() {
+    try {
+      const stored = localStorage.getItem('roko_waitlist');
+      return stored ? JSON.parse(stored) : [];
+    } catch (err) {
+      console.error("Failed to read waitlist data:", err);
+      return [];
+    }
+  }
+
+  function saveToWaitlist(email) {
+    if (!email) return;
+    const list = getWaitlist();
+    if (!list.includes(email)) {
+      list.push(email);
+      try {
+        localStorage.setItem('roko_waitlist', JSON.stringify(list));
+      } catch (err) {
+        console.error("Failed to write waitlist data:", err);
+      }
+    }
+  }
+
+  // Hero Form Submission
   const waitlistForm = document.getElementById('waitlist-form');
   const waitlistSuccess = document.getElementById('waitlist-success-msg');
+  const waitlistEmail = document.getElementById('waitlist-email');
 
-  if (waitlistForm && waitlistSuccess) {
+  if (waitlistForm && waitlistSuccess && waitlistEmail) {
     waitlistForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
-      // Hide form fields and display success block
+      const email = waitlistEmail.value.trim();
+      if (email) {
+        saveToWaitlist(email);
+      }
       waitlistForm.style.display = 'none';
       waitlistSuccess.classList.add('show');
     });
   }
 
-  // Footer Form
+  // Footer Form Submission
   const waitlistFormFooter = document.getElementById('waitlist-form-footer');
   const waitlistSuccessFooter = document.getElementById('waitlist-success-msg-footer');
+  const waitlistEmailFooter = document.getElementById('waitlist-email-footer');
 
-  if (waitlistFormFooter && waitlistSuccessFooter) {
+  if (waitlistFormFooter && waitlistSuccessFooter && waitlistEmailFooter) {
     waitlistFormFooter.addEventListener('submit', (e) => {
       e.preventDefault();
-      
-      // Hide form fields and display success block
+      const email = waitlistEmailFooter.value.trim();
+      if (email) {
+        saveToWaitlist(email);
+      }
       waitlistFormFooter.style.display = 'none';
       waitlistSuccessFooter.classList.add('show');
+    });
+  }
+
+  /* ==========================================================================
+     HIDDEN ADMIN DASHBOARD MODAL CONTROLS
+     ========================================================================== */
+
+  const adminLockBtn = document.getElementById('admin-lock-btn');
+  const adminModal = document.getElementById('admin-modal');
+  const adminCloseBtn = document.getElementById('admin-close-btn');
+  const adminExportBtn = document.getElementById('admin-export-btn');
+  const waitlistCount = document.getElementById('waitlist-count');
+  const adminEmailList = document.getElementById('admin-email-list');
+
+  function renderAdminWaitlist() {
+    if (!adminEmailList || !waitlistCount) return;
+    const list = getWaitlist();
+    
+    // Update count display
+    waitlistCount.textContent = list.length;
+    
+    // Clear previous items
+    adminEmailList.innerHTML = '';
+    
+    if (list.length === 0) {
+      adminEmailList.innerHTML = '<li class="empty-list-msg">No sign-ups yet.</li>';
+    } else {
+      list.forEach((email, idx) => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <span>${idx + 1}. ${email}</span>
+          <span style="font-size: 0.75rem; color: var(--text-light);">${new Date().toLocaleDateString()}</span>
+        `;
+        adminEmailList.appendChild(li);
+      });
+    }
+  }
+
+  if (adminLockBtn && adminModal) {
+    adminLockBtn.addEventListener('click', () => {
+      renderAdminWaitlist();
+      adminModal.classList.add('open');
+    });
+  }
+
+  if (adminCloseBtn && adminModal) {
+    adminCloseBtn.addEventListener('click', () => {
+      adminModal.classList.remove('open');
+    });
+  }
+
+  // Export CSV Action
+  if (adminExportBtn) {
+    adminExportBtn.addEventListener('click', () => {
+      const list = getWaitlist();
+      if (list.length === 0) {
+        alert("Waitlist is empty. Nothing to export!");
+        return;
+      }
+
+      // Generate CSV string
+      let csvContent = "data:text/csv;charset=utf-8,";
+      csvContent += "Index,Email Address,Date Added\r\n";
+      
+      list.forEach((email, idx) => {
+        csvContent += `${idx + 1},"${email}","${new Date().toLocaleDateString()}"\r\n`;
+      });
+
+      // Trigger download
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "roko_waitlist.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     });
   }

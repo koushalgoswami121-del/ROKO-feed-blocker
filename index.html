@@ -27,6 +27,7 @@
       <nav class="nav-links">
         <a href="#home">Home</a>
         <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
         <a href="#calculator">Time Saved</a>
         <a href="#faqs">FAQ</a>
         <a href="#about">About</a>
@@ -258,6 +259,83 @@
     </div>
   </section>
 
+  <!-- Pricing Section -->
+  <section class="pricing-section" id="pricing">
+    <div class="section-container">
+      <div class="section-header-center">
+        <h2 class="section-title">Simple, Transparent Pricing</h2>
+        <p class="section-subtitle">Invest in your focus. Reclaim your life from short-form feeds.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Monthly Card -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Monthly Plan</h3>
+            <p class="pricing-desc">Perfect for testing background protection.</p>
+            <div class="price">
+              <span class="currency">₹</span>
+              <span class="amount">99</span>
+              <span class="period">/mo</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><span>✓</span> Block Reels & Shorts</li>
+            <li><span>✓</span> Monitor Addictive Apps</li>
+            <li><span>✓</span> Basic Daily Stats</li>
+            <li class="disabled"><span>✗</span> Passcode Lock (Strict Mode)</li>
+            <li class="disabled"><span>✗</span> Uninstall Protection</li>
+          </ul>
+          <button class="btn-secondary pricing-btn" onclick="window.location.hash='#waitlist'">Start Trial</button>
+        </div>
+
+        <!-- Yearly Card (Recommended/Featured) -->
+        <div class="pricing-card featured">
+          <div class="popular-badge">Best Value</div>
+          <div class="pricing-header">
+            <h3>Yearly Plan</h3>
+            <p class="pricing-desc">For serious focus builders. Reclaim days of time.</p>
+            <div class="price">
+              <span class="currency">₹</span>
+              <span class="amount">69</span>
+              <span class="period">/yr</span>
+            </div>
+            <div class="promo-notice">🔥 Limited Pre-Launch Offer</div>
+          </div>
+          <ul class="pricing-features">
+            <li><span>✓</span> Block Reels & Shorts</li>
+            <li><span>✓</span> Monitor Addictive Apps</li>
+            <li><span>✓</span> Advanced Analytics & Insights</li>
+            <li><span>✓</span> Strict Mode Passcode Lock</li>
+            <li><span>✓</span> Uninstall Protection</li>
+          </ul>
+          <button class="btn-primary pricing-btn" onclick="window.location.hash='#waitlist'">Get Yearly Pro</button>
+        </div>
+
+        <!-- Lifetime Card -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Lifetime Access</h3>
+            <p class="pricing-desc">Pay once, enjoy distraction-free focus forever.</p>
+            <div class="price">
+              <span class="currency">₹</span>
+              <span class="amount">1,499</span>
+              <span class="period">/one-time</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><span>✓</span> Block Reels & Shorts</li>
+            <li><span>✓</span> Monitor Addictive Apps</li>
+            <li><span>✓</span> Unlimited Custom App Filters</li>
+            <li><span>✓</span> All Premium Features Included</li>
+            <li><span>✓</span> Free Lifetime Updates</li>
+          </ul>
+          <button class="btn-secondary pricing-btn" onclick="window.location.hash='#waitlist'">Buy Lifetime</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- About Section -->
   <section class="about-section" id="about">
     <div class="section-container">
@@ -378,7 +456,7 @@
           <a href="#calculator">Calculator</a>
           <a href="#faqs">FAQs</a>
         </div>
-        <p class="copyright">&copy; 2026 ROKO Protection. All rights reserved. Locally processed, privacy guaranteed.</p>
+        <p class="copyright">&copy; 2026 ROKO Protection. All rights reserved. | <a href="privacy.html" class="footer-link">Privacy Policy</a> <span class="admin-lock-btn" id="admin-lock-btn" style="cursor: pointer; opacity: 0.3; transition: opacity 0.2s;" title="Admin Dashboard">🔒</span></p>
       </div>
     </div>
   </footer>
@@ -410,6 +488,32 @@
       <div class="modal-actions">
         <button class="modal-btn cancel" id="pro-cancel-btn">Close</button>
         <button class="modal-btn confirm" id="pro-upgrade-btn">Unlock Now (Free Mock)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden Admin Dashboard Modal -->
+  <div class="modal-overlay" id="admin-modal">
+    <div class="modal-card admin-modal-card">
+      <div class="modal-header">
+        <span class="modal-crown">📊</span>
+        <h3>ROKO Waitlist Admin</h3>
+      </div>
+      <p>Manage and export emails submitted to the waitlist from this browser.</p>
+      
+      <div class="admin-stats">
+        <span>Total Sign-ups:</span> <strong id="waitlist-count">0</strong>
+      </div>
+      
+      <div class="admin-list-container">
+        <ul class="admin-email-list" id="admin-email-list">
+          <li class="empty-list-msg">No sign-ups yet.</li>
+        </ul>
+      </div>
+
+      <div class="modal-actions">
+        <button class="modal-btn cancel" id="admin-close-btn">Close</button>
+        <button class="modal-btn confirm" id="admin-export-btn">Export CSV</button>
       </div>
     </div>
   </div>
